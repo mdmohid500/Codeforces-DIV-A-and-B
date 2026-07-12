@@ -4,19 +4,20 @@ import java.util.*;
 
 public class Solution2224a {
 	
-	public static void solve(int n, int arr[])
+	public static void solve(int x, long a[])
 	{
-		int countp=0;
-		int countn=0;
-		for(int i=0;i<n;i++)
-		{
-			if(arr[i]<0)
-				countn++;
-			else
-				countp++;
-		}
-		System.out.println(countp+(countn%2==0?0:1));
+		 
+		 for(int i = x-2;i>=0;i--){
+	            if(a[i+1]>0){
+	                a[i]+=a[i+1];
+	            }
+	        }
+	        int c = 0;
+	        for(long i:a){
+	                if(i>0)c++;
+	        }
 		
+		System.out.println( c);
 	}
 
 	public static void main(String[] args) {
@@ -25,7 +26,7 @@ public class Solution2224a {
 		while(t-->0)
 		{
 			int n=s.nextInt();
-			int arr[]=new int[n];
+			long arr[]=new long[n];
 			for(int i=0;i<n;i++)
 			{
 				arr[i]=s.nextInt();
@@ -37,7 +38,5 @@ public class Solution2224a {
 
 }
 
-//5
-//0 -1 3 -3 0
 
 
