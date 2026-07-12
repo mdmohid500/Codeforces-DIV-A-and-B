@@ -11,7 +11,12 @@ public class Solution2227c {
 		List<Integer>res=new ArrayList<>();
 		for(int i=0;i<arr.length;i++)
 		{
-			if(arr[i]%2==0)
+			if(arr[i]%6==0)
+			{
+				six.add(arr[i]);
+				
+			}
+			else if(arr[i]%2==0)
 			{
 				two.add(arr[i]);
 				
@@ -19,11 +24,6 @@ public class Solution2227c {
 			else if(arr[i]%3==0)
 			{
 				three.add(arr[i]);
-				
-			}
-			else if(arr[i]%6==0)
-			{
-				six.add(arr[i]);
 			}
 			else
 			{
