@@ -6,18 +6,22 @@ public class Solution12 {
 	public static void solve(int n, int arr[])
 	{
 		int curr=0;
+		boolean ok=true;
 		for(int i=0;i<n;i++)
 		{
 			curr=curr+arr[i];
 			int sum=((i+1)*(i+2))/2;
 			if(curr<sum)
 			{
-				System.out.println("NO");
-				return ;
+				ok=false;
 			}
 			
 		}
+		if(ok)
 		System.out.println("YES");
+		else
+			System.out.println("NO");
+			
 	}
 
 	public static void main(String[] args) {
