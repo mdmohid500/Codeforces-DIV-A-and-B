@@ -1,3 +1,4 @@
+package constructivealgorithm.com.practice;
 import java.util.Scanner;
 
 public class Solution2208a {
